@@ -1,0 +1,24 @@
+{
+  "name": "source-map-analyse",
+  "version": "0.1.0",
+  "description": "Restore the source code according to source-map.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangawait/source-map-analyse.git"
+  },
+  "keywords": [
+    "source-map",
+    "restore stack",
+    "source-map-analyse"
+  ],
+  "author": "kobingo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiangawait/source-map-analyse/issues"
+  },
+  "homepage": "https://github.com/jiangawait/source-map-analyse#readme"
+}
