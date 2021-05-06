@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "removeComments": true,
+    "lib": ["ESNext"],
+    "types": ["node", "jest"]
+  },
+  "include": ["src", "global.d.ts"]
+}

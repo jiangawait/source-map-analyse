@@ -1,24 +1,61 @@
 {
-  "name": "source-map-analyse",
+  "name": "source-map-analysis",
   "version": "0.1.0",
   "description": "Restore the source code according to source-map.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "test": "jest",
+    "update:deps": "yarn upgrade-interactive --latest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jiangawait/source-map-analyse.git"
+    "url": "git+https://github.com/jiangawait/source-map-analysis.git"
   },
   "keywords": [
     "source-map",
-    "restore stack",
-    "source-map-analyse"
+    "restore",
+    "stack",
+    "source-map-analysis"
   ],
-  "author": "kobingo",
+  "author": "kobingo <jiangawait@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jiangawait/source-map-analyse/issues"
+    "url": "https://github.com/jiangawait/source-map-analysis/issues"
   },
-  "homepage": "https://github.com/jiangawait/source-map-analyse#readme"
+  "homepage": "https://github.com/jiangawait/source-map-analysis#readme",
+  "main": "index.js",
+  "module": "dist/source-map-trace.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "error-stack-parser": "^2.0.6",
+    "source-map": "^0.7.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/jest": "^26.0.8",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.2.0",
+    "jest": "^26.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
