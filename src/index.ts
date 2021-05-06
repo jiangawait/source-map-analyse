@@ -1,2 +1,2 @@
-export { default } from "./sourceMapAnalysis";
+export { default } from "./sourceMapTrack";
 export * from "./getTheSource";

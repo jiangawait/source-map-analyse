@@ -4,8 +4,8 @@ import commonjs from '@rollup/plugin-commonjs'
 import ts from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 
-const name = 'source-map-analysis'
-const globalName = 'SourceMapAnalysis'
+const name = 'source-map-track'
+const globalName = 'SourceMapTrack'
 const packageFormats = ['esm', 'cjs', 'umd']
 const configs = {
   esm: {

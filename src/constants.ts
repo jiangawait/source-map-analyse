@@ -1,1 +1,1 @@
-export const LOG_PREFIX = `[SourceMapAnalysis]`;
+export const LOG_PREFIX = `[SourceMapTrack]`;

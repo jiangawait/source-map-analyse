@@ -1,5 +1,5 @@
 {
-  "name": "source-map-analysis",
+  "name": "source-map-track",
   "version": "0.1.0",
   "description": "Restore the source code according to source-map.",
   "scripts": {
@@ -11,20 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jiangawait/source-map-analysis.git"
+    "url": "git+https://github.com/jiangawait/source-map-track.git"
   },
   "keywords": [
     "source-map",
     "restore",
     "stack",
-    "source-map-analysis"
+    "source-map-track"
   ],
   "author": "kobingo <jiangawait@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jiangawait/source-map-analysis/issues"
+    "url": "https://github.com/jiangawait/source-map-track/issues"
   },
-  "homepage": "https://github.com/jiangawait/source-map-analysis#readme",
+  "homepage": "https://github.com/jiangawait/source-map-track#readme",
   "main": "index.js",
   "module": "dist/source-map-trace.esm.js",
   "types": "dist/index.d.ts",

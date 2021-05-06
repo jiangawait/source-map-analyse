@@ -6,7 +6,7 @@ import {
 import type { ErrorDetail, RawSourceMap } from "./interfaces";
 import { LOG_PREFIX } from "./constants";
 
-class SourceMapAnalysis {
+class SourceMapTrack {
   readonly sourceMap: PathLike | RawSourceMap;
   constructor(sourceMap: PathLike | RawSourceMap) {
     this.sourceMap = sourceMap;
@@ -31,4 +31,4 @@ class SourceMapAnalysis {
   }
 }
 
-export default SourceMapAnalysis;
+export default SourceMapTrack;

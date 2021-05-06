@@ -1,4 +1,4 @@
-export interface SourceMapAnalysisCode {
+export interface SourceMapTrackCode {
   highlight: boolean;
   number: number;
   code: string;
@@ -6,7 +6,7 @@ export interface SourceMapAnalysisCode {
 
 export interface Result {
   parsed:any
-  code?: SourceMapAnalysisCode[]
+  code?: SourceMapTrackCode[]
 }
 
 export interface RawSourceMap {
