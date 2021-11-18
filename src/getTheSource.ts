@@ -70,7 +70,7 @@ export async function getTheSourceByLineAndColumn(
   return { parsed };
 }
 
-export function getStackFrame(errorDetail: ErrorDetail) {
+export function getStackFrame(errorDetail: ErrorDetail): ErrorStackParser.StackFrame {
   const error = new Error();
   for (const key in errorDetail) {
     // @ts-ignore
@@ -79,12 +79,32 @@ export function getStackFrame(errorDetail: ErrorDetail) {
   return ErrorStackParser.parse(error)[0];
 }
 
+export function getAllStackFrame(errorDetail: ErrorDetail): ErrorStackParser.StackFrame[] {
+  const error = new Error();
+  for (const key in errorDetail) {
+    // @ts-ignore
+    error[key] = errorDetail[key];
+  }
+  return ErrorStackParser.parse(error);
+}
+
 export async function getTheSourceByError(
   sourceMap: PathLike | RawSourceMap,
   errorDetail: ErrorDetail
 ) {
   const stackFrame = getStackFrame(errorDetail);
 
+  return getTheSourceByLineAndColumn(
+    sourceMap,
+    stackFrame.lineNumber!,
+    stackFrame.columnNumber!
+  );
+}
+
+export async function getSourceByStackFrame(
+  sourceMap: PathLike | RawSourceMap,
+  stackFrame: ErrorStackParser.StackFrame
+){
   return getTheSourceByLineAndColumn(
     sourceMap,
     stackFrame.lineNumber!,
